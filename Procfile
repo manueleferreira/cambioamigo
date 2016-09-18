@@ -1,0 +1,1 @@
+web: gunicorn bigprice.wsgi --log-file -
