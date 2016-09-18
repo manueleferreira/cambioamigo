@@ -3,36 +3,33 @@ $( function() {
 } );
 
 var clients = [
-    { "Name": "Otto Clay", "Cidade":"Rio de Janeiro", "Moeda": 1, "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Connor Johnston", "Cidade":"São Paulo", "Moeda": 2, "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Lacey Hess", "Cidade":"Rio de Janeiro", "Moeda": 3, "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Timothy Henson", "Cidade":"Rio de Janeiro", "Moeda": 1, "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Ramona Benton", "Cidade":"Rio de Janeiro", "Moeda": 3, "Cotação": "R$3,50", "Quantidade": 200 }
-];
-
-var currencies = [
-    { Name: "", Id: 0 },
-    { Name: "Dolar", Id: 1 },
-    { Name: "Euro", Id: 2 },
-    { Name: "Libra", Id: 3 }
+    { "Name": "Otto Clay", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$3,50", "Quantidade": 200 },
+    { "Name": "Connor Johnston", "Cidade":"São Paulo", "Moeda": "Euro", "Cotação": "R$3,50", "Quantidade": 200 },
+    { "Name": "Lacey Hess", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$3,50", "Quantidade": 200 },
+    { "Name": "Timothy Henson", "Cidade":"Rio de Janeiro", "Moeda": "Euro", "Cotação": "R$3,50", "Quantidade": 200 },
+    { "Name": "Ramona Benton", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$3,50", "Quantidade": 200 }
 ];
 
 $("#jsGrid").jsGrid({
     width: "100%",
-    height: "400px",
-
-    editing: true,
-    sorting: true,
-    paging: true,
+    height: "300px",
 
     data: clients,
 
     fields: [
-        { name: "Name", type: "text", validate: "required" },
+        { name: "Name", type: "text", validate: "required", width:100 },
         { name: "Cidade", type: "text", validate: "required" },
-        { name: "Moeda", type: "select", items: currencies, valueField: "Id", textField: "Moeda" },
-        { name: "Cotação", type: "text" },
-        { name: "Quantidade", type: "number" }
+        { name: "Moeda", type: "text", validate: "required" },
+        { name: "Cotação", type: "text", width:80 },
+        { name: "Quantidade", type: "number", width:80 },
+        {
+            itemTemplate: function(_, item) {
+                return $("<button>").text("Pegar Trokado!")
+                    .on("click", function() {
+                        alert(item.Name);
+                    });
+            }
+        }
     ]
 });
 
