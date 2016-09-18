@@ -4,10 +4,10 @@ $( function() {
 
 var clients = [
     { "Name": "Otto Clay", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Connor Johnston", "Cidade":"São Paulo", "Moeda": "Euro", "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Lacey Hess", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Timothy Henson", "Cidade":"Rio de Janeiro", "Moeda": "Euro", "Cotação": "R$3,50", "Quantidade": 200 },
-    { "Name": "Ramona Benton", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$3,50", "Quantidade": 200 }
+    { "Name": "Connor Johnston", "Cidade":"São Paulo", "Moeda": "Euro", "Cotação": "R$2,20", "Quantidade": 200 },
+    { "Name": "Lacey Hess", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$4,50", "Quantidade": 200 },
+    { "Name": "Timothy Henson", "Cidade":"Rio de Janeiro", "Moeda": "Euro", "Cotação": "R$1,90", "Quantidade": 200 },
+    { "Name": "Ramona Benton", "Cidade":"Rio de Janeiro", "Moeda": "Dolar", "Cotação": "R$2,23", "Quantidade": 200 }
 ];
 
 $("#jsGrid").jsGrid({
